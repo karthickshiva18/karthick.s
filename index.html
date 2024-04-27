@@ -67,19 +67,21 @@
         <p>Copyright &copy; 2024 Karthick</p>
     </footer>
 
-    <script>
-        const sections = document.querySelectorAll('section');
-        const nav = document.querySelector('.navigation');
-        const navLi = nav.querySelectorAll('li');
+   <script>
+  const sections = document.querySelectorAll('section');
+  const nav = document.querySelector('.navigation');
+  const navLi = nav.querySelectorAll('li');
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                if (scrollY >= sectionTop - sectionHeight / 3) {
-                    current = section.getAttribute('id');
-                }
-            });
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop - sectionHeight / 3) {
+        current = section.getAttribute('id');
+      }
+    });
 
-            navLi.forEach(li => li.classList.remove('
+    navLi.forEach(li => li.classList.remove('active')); // Added closing parenthesis
+  });
+</script>
